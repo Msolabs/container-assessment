@@ -1,0 +1,241 @@
+[
+    {
+        "Id": "858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2",
+        "Created": "2026-06-03T09:05:23.793692706Z",
+        "Path": "./much-to-do",
+        "Args": [],
+        "State": {
+            "Status": "restarting",
+            "Running": true,
+            "Paused": false,
+            "Restarting": true,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 1,
+            "Error": "",
+            "StartedAt": "2026-06-03T09:13:14.540381797Z",
+            "FinishedAt": "2026-06-03T09:13:14.792065284Z",
+            "Health": {
+                "Status": "unhealthy",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:fe0b2a14cd9423a1bd4a6599b3cde7b0e0e065c6ebfb9eb248c6d17c57f4d6a7",
+        "ResolvConfPath": "/var/lib/docker/containers/858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2/hostname",
+        "HostsPath": "/var/lib/docker/containers/858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2/hosts",
+        "LogPath": "/var/lib/docker/containers/858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2/858ceaec19b8eb054544d9ff68372ee70a4bbb232d0fe0230ab5821f6e018bb2-json.log",
+        "Name": "/muchtodo-backend",
+        "RestartCount": 17,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "container-assessment_default",
+            "PortBindings": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "858ceaec19b8",
+            "Domainname": "",
+            "User": "appuser",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PORT=8080",
+                "DB_NAME=much_todo_db",
+                "JWT_EXPIRATION_HOURS=72",
+                "LOG_LEVEL=INFO",
+                "LOG_FORMAT=json",
+                "MONGO_URI=mongodb://admin:admin123@mongodb:27017/much_todo_db?authSource=admin",
+                "JWT_SECRET_KEY=super-secret-key",
+                "ENABLE_CACHE=false",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget --spider http://localhost:8080/health || exit 1"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 5000000000,
+                "Retries": 3
+            },
+            "Image": "muchtodo-backend:v1",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "./much-to-do"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "5ce60213fa8b90ab0b395e943207e783a1eec0ab404325be5c06310aec6dcdd3",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "mongodb:service_started:false",
+                "com.docker.compose.image": "sha256:fe0b2a14cd9423a1bd4a6599b3cde7b0e0e065c6ebfb9eb248c6d17c57f4d6a7",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "container-assessment",
+                "com.docker.compose.project.config_files": "C:\\Users\\DELL\\container-assessment\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\DELL\\container-assessment",
+                "com.docker.compose.service": "backend",
+                "com.docker.compose.version": "5.1.4"
+            },
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "container-assessment_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "muchtodo-backend",
+                        "backend"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "f9614718eacecae1150b9ba0576f92241cfe011cdb406c3eae47c4a140ece533",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "muchtodo-backend",
+                        "backend",
+                        "858ceaec19b8"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:df07689f1c10b5eccd30612c39d4b4384a0a67725fb32c8d21b01e9520e05f7f",
+            "size": 1049,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muchtodo-backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: muchtodo-backend
+
+  template:
+    metadata:
+      labels:
+        app: muchtodo-backend
+
+    spec:
+      containers:
+      - name: muchtodo-backend
+
+        image: muchtodo-backend:v1
+
+        imagePullPolicy: IfNotPresent
+
+        ports:
+        - containerPort: 8080
+
+        env:
+        - name: PORT
+          value: "8080"
+
+        - name: DB_NAME
+          value: "much_todo_db"
+
+        - name: JWT_SECRET_KEY
+          value: "super-secret-key"
+
+        - name: JWT_EXPIRATION_HOURS
+          value: "72"
+
+        - name: ENABLE_CACHE
+          value: "false"
+
+        - name: LOG_LEVEL
+          value: "INFO"
+
+        - name: LOG_FORMAT
+          value: "json"
+
+        - name: MONGO_URI
+          value: "mongodb://admin:admin123@mongodb:27017/much_todo_db?authSource=admin"
